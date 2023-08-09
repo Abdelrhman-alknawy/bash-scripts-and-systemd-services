@@ -1,0 +1,5 @@
+[Unit]
+Description=A script to backup my files every day 
+[Service]
+# The location of the  backup script
+ExecStart=/home/elknawy/date.sh

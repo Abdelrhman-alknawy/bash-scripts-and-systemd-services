@@ -1,0 +1,13 @@
+#Author : abdelrhman elknawy
+#Date(d-m-y) : 06 -08 - 2023 
+#Version : 1.0 V     
+In this directory you will find a Service in systemd called backup.service the brief of it that it calls the script date.sh to backup the files in the task-directory to the backup directory and 
+ it gets triggered by a timer in systemd called backup.timer the timer invoke the service every day at 2AM the backup is after booting by the configuration in the [Install] 
+WantedBy=
+the bash script uses the rsync command to copy and backup the files in the directory and and using  a time stamp by using the (date %y-%m-%d) to list the backup directories in date manner in year month and ,
+day 
+and checks the directory (backup directoy ) and keep the last 5 backups in the directory as the backup.timer invokes the backup.service it will create each day a backup directory in the script i append ,
+the directories created with the name backup and keep the last 5 versions and delete any exceeded and outdated backups . 
+Assumption : it was ambigous in the requirements and the deliverables it didn't include the backup.timer in systemd services so i had to make the assumption of backup.timer file 
+
+ 

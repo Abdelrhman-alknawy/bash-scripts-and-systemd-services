@@ -1,0 +1,9 @@
+[Unit]
+Description= A timer for my service to invoke it every Day at 2.00 AM 
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+Unit=backup.service
+
+[Install]
+WantedBy=timers.target
